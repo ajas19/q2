@@ -1,0 +1,30 @@
+import java.rmi.Naming;
+import java.util.Scanner;
+
+ class ArrayClient{
+ 	public static void main(String[] args) {
+ 		Scanner sc = new Scanner(System.in);
+ 		try{
+			System.out.println("Enter the Array Size");
+			int size=sc.nextInt();
+			int[] array = new int [size];
+			 for(int i=0; i<size;i++){
+			 	System.out.println("Enter the"+(i+1)+ "value:");
+			 	int num=sc.nextInt();
+			 	array[i]=num;
+
+			 }
+			 ArrayInt h= (ArrayInt)Naming.lookup("abc");
+			System.out.println("maximum value is"+h.maxVal(array));
+			System.out.println("maximum value is"+h.minVal(array));
+			System.out.println("maximum value is"+h.avgVal(array));
+
+
+
+
+ 		} catch (Exception e){
+ 			System.out.println("Error:"+e);
+
+ 		}
+ 	}
+ }

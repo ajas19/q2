@@ -1,0 +1,16 @@
+javac <interface>.java
+javac <implementation>.java
+
+rmic <implementation>
+
+rmiregistry &
+
+
+javac <server>.java
+
+java <server>
+
+
+javac <client>.java
+
+java <client>

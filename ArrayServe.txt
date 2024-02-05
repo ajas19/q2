@@ -1,0 +1,15 @@
+import java.rmi.Naming;
+
+ class ArrayServer{
+ 	public static void main(String[] args) {
+ 		try{
+ 			ArrayImp ob = new ArrayImp();
+ 			Naming.rebind("abc",ob);
+ 			System.out.println("server is initiated");
+
+ 		} catch (Exception e){
+ 			System.out.println("Error:"+e);
+
+ 		}
+ 	}
+ }

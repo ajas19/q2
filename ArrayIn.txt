@@ -1,0 +1,8 @@
+import java.rmi.*;
+
+interface ArrayInt extends Remote{
+	public int maxVal(int a[])throws RemoteException;
+	public int minVal(int b[])throws RemoteException;
+	public double avgVal(int x[])throws RemoteException;
+
+}
